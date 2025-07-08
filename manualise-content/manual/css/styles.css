@@ -1,0 +1,2492 @@
+@font-face {
+    font-family: 'Manualise_Safety_Symbols';
+    src: url('../fonts/Manualise_Safety_Symbols.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'MNLCallOutsfamilyBold';
+    src: url('../fonts/MNLCallOutsfamilyBold.otf') format('woff');
+}
+
+@font-face {
+    font-family: 'ShellFuturaBold';
+    src: url('../fonts/ShellFutura-Bold.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'ShellFuturaBook';
+    src: url('../fonts/ShellFutura-Book.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'ShellFuturaMedium';
+    src: url('../fonts/ShellFutura-Medium.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Wingding';
+    src: url('../fonts/wingding.ttf') format('woff');
+}
+@font-face {
+    font-family: 'StagSans-Medium';
+    src: url('../fonts/StagSansMedium.ttf') format('woff');
+}
+@font-face {
+    font-family: 'StagSans-Light';
+    src: url('../fonts/StagSansLight.ttf') format('woff');
+}
+/* ============ Reset ============ */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+em {
+    font-family: 'MarkLightItalic', sans-serif;
+}
+
+b {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: underline;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #d9d9d9;
+}
+
+:-moz-placeholder {
+    color: #d9d9d9;
+}
+
+::-moz-placeholder {
+    color: #d9d9d9;
+    opacity: 1;
+    /* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:-ms-input-placeholder {
+    color: #d9d9d9;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+:focus:-moz-placeholder {
+    color: transparent;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+    opacity: 0;
+    /* Since FF19 lowers the opacity of the placeholder by default */
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+    font: 14px/1.5 'ShellFuturaBook', sans-serif;
+    color: #000;
+    overflow-y: scroll;
+    min-width: 320px;
+}
+
+.index-page {
+    background: #fff;
+}
+
+a {
+    color: #000;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #dd1d21;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+.parent-description {
+    font-size: 16px;
+    margin: 0 0 22px;
+    color: #808080;
+}
+
+strong {
+    font-weight: 400;
+    font-family: 'ShellFuturaBold', sans-serif;
+}
+
+hr {
+    border: 1px solid #b4b4b4;
+    border-bottom: none;
+    margin: 26px 0 13px;
+}
+
+.anim {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper {
+    margin: 0 auto;
+    /* max-width: 1260px; */
+    /* padding: 0 20px 0 115px; */
+}
+
+.wrapper-narrow {
+    /* max-width: 1115px; */
+    /* padding: 0 65px; */
+}
+
+.wrapper-content {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.flex-block {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-top {
+    align-items: flex-start;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+#search-results.active~#pagination {
+    display: none;
+}
+
+
+/* ========= Header ======== */
+.header {
+    padding: 0;
+    margin: 0 0 36px;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: all 500ms ease;
+}
+
+.header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .logo {
+    max-width: 300px;
+    width: 300px;
+    display: inline-block;
+    margin-bottom: -6px;
+}
+@-moz-document url-prefix() {
+    .header .logo{
+        margin-bottom: -5px;
+    }
+}
+@media (max-width: 880px){
+    .header .logo{
+        display: inline-block;
+    }
+}
+@media (max-width: 650px){
+    .header{
+        border-bottom:0;
+    }
+}
+.header a img {
+    width: 100%;
+    display: block;
+}
+
+/*
+    - Added min-width of 320px so that the header content doesn't break below that resolution.
+*/
+.header .wrapper {
+    min-width: 320px;
+    justify-content: space-between;
+    padding: 0 65px 0 42px;
+}
+
+.homepage-logo {
+    display: none !important;
+}
+
+.header.index-page .homepage-logo {
+    display: block !important;
+}
+
+.header.index-page .standard-logo {
+    display: none;
+}
+
+.search-language-holder {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    padding: 0;
+    margin: auto 0;
+    justify-content: space-between;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.download-button {
+    cursor: pointer;
+    display: none;
+}
+
+.download-button.white {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+}
+
+.download-button.ng-show {
+    display: none;
+}
+
+.language-button {
+    display: flex;
+    align-items: center;
+    color: #595959;
+}
+
+/*
+    - Position relative so that the dropdown right side is aligned with the language button.
+*/
+
+.language-holder {
+    position: relative;
+    margin-left: auto;
+}
+
+.language-holder .label-language {
+    font-size: 16px;
+    padding: 0px 5px;
+    text-transform: uppercase;
+    font-family: 'ShellFuturaBold', sans-serif;
+}
+
+/*
+   - The right padding is removed so that the button's end aligns with the main content.
+*/
+
+.language-holder .button-language-dropdown {
+    border-left: 2px solid #c9c9c9;
+    padding: 0 0 0 5px;
+    height: 25px;
+}
+
+.language-holder .button-language-dropdown::after {
+    content: "\f107";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-size: 16px;
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.language-holder .button-language-dropdown:hover:after,
+.language-holder.active .button-dropdown:after {
+    color: #f7a600;
+}
+
+/*
+    - Right position to 0 fixes the issues where the dropdown partially hidden.
+*/
+
+.language-holder .language-dropdown {
+    position: absolute;
+    width: 120px;
+    width: max-content;
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow: hidden;
+    max-height: 0;
+    transition: .3s ease;
+    top: 40px;
+    right: 0px;
+}
+
+.language-holder .language-dropdown ul {
+    padding: 8px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #595959;
+}
+
+/*
+    - Removed margin from the list because it was causing horizontal scrolling within the dropdown.
+*/
+
+.language-holder .language-dropdown li {
+    margin: 0;
+    color: #595959;
+    padding: 5px 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.language-holder .language-dropdown li.active {
+    font-weight: bold;
+}
+.language-holder .language-dropdown li:last-child {
+    border: none;
+}
+
+.language-holder .language-dropdown li:hover {
+    background: #cfe8ef;
+}
+
+.language-holder.active .language-dropdown {
+    max-height: 4000px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.search-holder {
+    position: relative;
+    border-radius: 5px;
+    background: #fff;
+    width: 223px;
+    margin-right: 25px;
+    margin-bottom: 45px;
+}
+
+.search-holder input::-webkit-input-placeholder {
+    font-family: 'ShellFuturaBook', sans-serif;
+    color: #595959;
+}
+
+.search-holder input:-moz-placeholder {
+    font-family: 'ShellFuturaBook', sans-serif;
+    color: #595959;
+}
+
+.search-holder input::-moz-placeholder {
+    font-family: 'ShellFuturaBook', sans-serif;
+    color: #595959;
+}
+
+.search-holder input:-ms-input-placeholder {
+    font-family: 'ShellFuturaBook', sans-serif;
+    color: #595959;
+}
+
+.search-holder input {
+    font-family: 'ShellFuturaBook', sans-serif;
+    background: none;
+    border: 1px solid #595959;
+    line-height: 1;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 25px 9px 12px;
+    font-size: 11px;
+}
+
+.search-holder button {
+    background: none;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    border: none;
+    width: 33px;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-holder button::before {
+    width: 30px;
+    content: url('../images/search-icon.svg');
+    display: inline-block;
+}
+
+.search-holder button:hover:before {
+    color: #333;
+}
+
+.sidebar .close-button,
+.mobile-menu-button {
+    display: none;
+}
+
+.index-page .mobile-menu-button {
+    display: none !important;
+}
+
+.header-link {
+    margin: 3px 42px 0 auto;
+    font-size: 20px;
+    font-family: 'ShellFuturaBold', sans-serif;
+    color: #fff;
+}
+
+
+/* =========== Main =========== */
+
+/*.sidebar {
+    width: 25%;
+    line-height: 1;
+    overflow: hidden;
+    max-height: calc(100% - 50px);
+    contain: content;
+}*/
+
+.sidebar {
+    width: calc(25% + 20px);
+    line-height: 1;
+}
+
+.table-container.table_style_5_container{
+    border-bottom: 2px solid #cdcdcd;
+}
+
+.sidebar-content.navbar {
+    position: sticky;
+    top: 0;
+}
+
+/*.sidebar-content.fixed {
+    max-width: calc((100% - 130px) * 0.25);
+    overflow: auto;
+    max-height: calc(100% - 50px);
+}*/
+
+.main-content {
+    width: 73%;
+    position: relative;
+    border-radius: 3px;
+    min-height: 600px;
+    margin: 0 0 30px;
+}
+
+section.per-language {
+    /* padding: 39px 72px 39px 72px; */
+    background: #fff;
+}
+
+
+/* ====== Special Table using table_style_5 ======*/
+
+.special-table {
+    display: none;
+}
+
+.special-table.ng-show {
+    display: block;
+}
+
+.table-block.table_style_5 {
+    border: none;
+}
+
+.table-block.table_style_5 .tr-block {
+    border: none;
+}
+
+.table-block.table_style_5 .tr-block:nth-child(2n+1) {
+    background: none;
+}
+
+
+
+.table-block.table_style_5 .tr-block:nth-child(3) {
+    background: #000;
+}
+
+.table-block.table_style_5 .tr-block .td-block {
+    border: none;
+}
+
+.table-block.table_style_5 .tr-block .td-block {
+    position: relative;
+    /* padding: 8px 32px; */
+}
+
+@media (max-width:767.98px) {
+    .tr-block-flex {
+        display: grid !important;
+        grid-template-columns: 100%;
+        /* column-span: 2!important; */
+    }
+
+    .tr-block-flex .td-block {
+        display: grid !important;
+        width: 100% !important;
+        grid-template-columns: 100%;
+        /* column-span: 2!important; */
+    }
+}
+
+.table-block.table_style_5 .tr-block:first-child .td-block:nth-child(2) .ltb-container {
+    width: 100%;
+    height: 150%;
+    top: 0;
+    right: 0px;
+    position: absolute;
+    padding-bottom: 0;
+}
+
+
+@media (max-width:767.98px) {
+    .table-block.table_style_5 .tr-block:first-child .td-block:nth-child(2) .ltb-container{
+        position: static!important;
+        height: auto;
+    }
+
+    .td-block-mh{
+        display: none!important;
+    }
+}
+.table-block.table_style_5 .tr-block:first-child .td-block:first-child .ltb-container.body_5 {
+    display: none;
+}
+
+.table-block.table_style_5 .tr-block:first-child .td-block:nth-child(2) .body_1_VarA img {
+    width: auto!important;
+    /* max-width: 110%; */
+    float: right;
+    right: 0px;
+    position: relative;
+}
+@media (max-width:767.98px) {
+    .table-block.table_style_5 .tr-block:first-child .td-block:nth-child(2) .body_1_VarA img {
+        padding-top: 0!important;
+        float: left;
+    }
+}
+@media (max-width: 650px){
+    /* .table-block.table_style_5 .tr-block:first-child .td-block:nth-child(2) .body_1_VarA img{
+        max-width: 170%;
+    } */
+}
+/* Added extra padding to top to match bottom spacing. */
+/* .table-block.table_style_5 .tr-block:nth-child(2) .td-block {
+    padding: 22px 32px 16px 32px;
+} */
+.table-block.table_style_5 .tr-block:nth-child(2) .td-block span {
+   color: gray;
+}
+
+.table-block.table_style_5 .tr-block:nth-child(2) .ltb-container.body_5 {
+    display: none;
+}
+
+
+
+/* ============ Home Page =======  */
+
+.home-page .header.index-page {
+    margin: 0 0 100px;
+}
+
+.home-title-block {
+    padding: 70px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+@media (max-height: 660px) {
+    .home-title-block {
+        padding: 15px 0 0;
+    }
+}
+
+.home-title-block h1:after {
+    content: '';
+    width: 9px;
+    height: 9px;
+    background: #dd1d21;
+    display: inline-block;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.home-title-block a {
+    border: 1px solid #dd1d21;
+    color: #dd1d21;
+    text-decoration: none;
+    padding: 16px 21px 16px 38px;
+    font-size: 18px;
+    font-family: 'ShellFuturaBold', sans-serif;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    margin: 0 0 15px;
+}
+
+.home-title-block a:after {
+    content: '';
+    width: 22px;
+    height: 35px;
+    background-image: url('../images/arrow-button.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 0 0 31px;
+    transition: all 0.3s ease-out;
+}
+
+.home-title-block a:hover {
+    background: #dd1d21;
+    color: #fff;
+}
+
+.home-title-block a:hover:after {
+    background-image: url('../images/arrow-button-hover.svg');
+}
+
+.banner-holder {
+    display: flex;
+    min-height: 200px;
+    justify-content: center;
+}
+
+.banner-holder img {
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* =========== Sidebar ========= */
+
+.sidebar-banner {
+    margin: 0 0 17px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #dd1d21;
+    display: none;
+}
+
+.sidebar-banner.active {
+    display: block;
+}
+
+.sidebar-banner .title-block {
+    margin: 0 0 9px;
+}
+
+.sidebar-banner h4 {
+    font-size: 17px;
+    font-family: 'ShellFuturaBold', sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-y: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease-out;
+}
+
+.navbar a span.parent-tag {
+    margin: 0 7px 0 0;
+    min-width: 21px;
+}
+
+.navbar a.title-tag span.parent-tag {
+    margin: 0;
+    width: 0;
+}
+
+
+/*Specific situation for red tag to use its inherit color*/
+
+.navbar .nav-link red {
+    color: inherit;
+}
+
+.navbar .nav-item {
+    word-break: break-word;
+    margin: 0 0 15px;
+}
+
+.nav-item>a {
+    display: flex;
+    font-family: 'StagSans-Medium', sans-serif;
+    color: #000;
+}
+
+.nav-item>a.active {
+    color: #000;
+}
+
+.nav-item.active > a .highlight::after,
+.chLevel-2.active > a .highlight::after {
+    margin: 0 0 0 3px;
+    min-width: 10px;
+    height: 12px;
+    background-image: url('../images/red-arrow.svg');
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+    content: '';
+    filter: brightness(0) saturate(100%) invert(79%) sepia(32%) saturate(7150%) hue-rotate(4deg) brightness(100%) contrast(107%);
+}
+
+.chLevel-2.active > a .highlight::after {
+    height: 9px;
+    margin-bottom: -1px;
+}
+
+.nav-item .submenu {
+    padding: 15px 0 5px 24px;
+}
+
+.nav-item .submenu li {
+    margin: 0 0 1px;
+}
+
+.nav-item .submenu a {
+    display: flex;
+    color: #595959;
+    font-family: 'ShellFuturaBook', sans-serif;
+}
+
+
+.nav-item .submenu a:hover {
+    color: #dd1d21;
+}
+
+.nav-item .submenu a span {
+    margin: 0 10px 0 0;
+    width: 35px;
+    flex-shrink: 0;
+}
+
+.extra-item>a {
+    display: block;
+}
+
+.extra-item a span {
+    margin: 0 16px 0 0;
+}
+
+.nav-item.active>.submenu-2,
+.chLevel-2.active > .submenu-3 {
+    display: block;
+}
+
+.submenu-2,
+.submenu-3,
+.submenu-4 {
+    display: none;
+    padding: 15px 0 5px 0;
+}
+
+.submenu-3 {
+    padding-left: 1.9rem;
+}
+
+.submenu-2 ul,
+.submenu-3 ul,
+.submenu-4 ul {
+    font-size: 10.7px;
+    color: #595959 !important;
+}
+
+.submenu-2 li {
+    margin: 0 0 1px;
+}
+
+.submenu-2 a {
+    display: flex;
+}
+
+.submenu-2 a span.parent-tag {
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.nav-item .submenu-2 a:hover {
+    color: #dd1d21;
+}
+
+
+/* ============= Main Content ============= */
+
+.title-block span {
+    margin: 0 30px 0 0;
+}
+
+.subtitle-block {
+    font-family: 'RobotoBold', sans-serif;
+    font-size: 17px;
+    line-height: 1.1;
+    margin: 0 0 12px;
+    padding: 0 0 6px;
+    border-bottom: 1px solid #dd1d21;
+}
+
+.subtitle-block span {
+    margin: 0 15px 0 0;
+}
+
+.hightlight {
+    color: #dd1d21;
+}
+
+h4.subtitle-block {
+    font-size: 13px;
+    border: none;
+    margin: 0 0 2px;
+}
+
+.info-block {
+    margin: 0 0 34px;
+}
+
+.title-paragraph {
+    font-size: 13px;
+    font-family: 'MarkBoldItalic', sans-serif;
+    line-height: 1.1;
+    margin: 0 0 16px;
+}
+
+.message-block {
+    background: #f2f2f2;
+    padding: 20px 24px 15px;
+    margin: 0 0 34px;
+    font-size: 15px;
+}
+
+.message-block p {
+    margin: 0 0 8px;
+}
+
+.list {
+    margin: 0 0 13px;
+}
+
+.list>li {
+    position: relative;
+    padding: 0 0 0 20px;
+    margin: 0 0 1px;
+}
+
+.list>li:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+}
+
+.list ul {
+    padding: 12px 0 12px 25px;
+}
+
+.list ul li {
+    position: relative;
+    padding: 0 0 0 13px;
+}
+
+.list ul li:before {
+    content: '';
+    width: 6px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+.list-a {
+    list-style: lower-alpha;
+    padding: 0 0 0 15px;
+}
+
+.list-columns {
+    display: flex;
+}
+
+.list-columns ul {
+    width: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+
+.list-columns li {
+    display: flex;
+}
+
+.list-columns span {
+    font-family: 'MNLCallOutsfamilyBold';
+    color: #dd1d21;
+    flex-shrink: 0;
+    margin: 0 4px 0 0;
+}
+
+.table-holder {
+    border-top: 1px solid #babbbd;
+    border-bottom: 1px solid #babbbd;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 0 13px;
+    position: relative;
+}
+
+.table-holder .row-holder {
+    border-bottom: 1px solid #babbbd;
+    padding: 6px 0;
+    display: flex;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.table-holder .row-holder:last-child {
+    border: none;
+}
+
+.table-holder p {
+    margin: 0;
+}
+
+.image-caption {
+    font-style: italic;
+    padding: 4px 0;
+    border-top: 1px solid #babbbd;
+    border-bottom: 1px solid #babbbd;
+    margin: 10px 0 25px;
+}
+
+.image-caption span {
+    display: inline-block;
+    margin: 0 12px 0 0;
+}
+
+.table-image-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.step-number {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin: 0 23px 0 0;
+    flex-shrink: 0;
+}
+
+.step-number.step1 {
+    background-image: url('../images/1.svg');
+}
+
+.step-number.step2 {
+    background-image: url('../images/2.svg');
+}
+
+.step-number.step3 {
+    background-image: url('../images/3.svg');
+}
+
+.w50 {
+    width: 50%;
+}
+
+.image-holder {
+    background: #fff;
+}
+
+.image-holder img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* ============= Warnings ========= */
+
+.message-icon-holder {
+    display: inline-block;
+}
+
+.message-icon {
+    padding: 3px 7px;
+    line-height: 1;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin: 0 0 9px;
+    font-family: 'RobotoBold', sans-serif;
+}
+
+.pay-attention {
+    background: #1357a4;
+    font-family: 'RobotoBoldItalic', sans-serif;
+}
+
+.danger {
+    background: #e30513;
+}
+
+.warning {
+    background: #dd1d21;
+}
+
+.caution {
+    background: #f4d41b;
+    color: #000;
+}
+
+.caution:before,
+.warning:before,
+.danger:before {
+    content: '6';
+    font-family: 'Manualise_Safety_Symbols';
+    margin: 0 4px 0 0;
+    font-size: 11px;
+}
+
+.info {
+    width: 15px;
+    height: 15px;
+    background-image: url('../images/info.svg');
+    background-size: cover;
+    margin: 0 6px 0 0;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+
+/* ============== Footer ========== */
+
+.footer {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    line-height: 1;
+    font-size: 13px;
+    padding: 15px 0;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.overlay-page {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-page.active {
+    overflow: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.m10 {
+    margin-bottom: 10px;
+}
+
+.ltb-container {
+    /*margin: 10px 0 10px;*/
+}
+
+#search-results {
+    display: none;
+    border: none;
+    height: 90%;
+}
+
+#search-results.active {
+    display: block;
+}
+
+#search-results .description-block {
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 10px;
+}
+
+#search-results .description-block .ltb-container {
+    font-size: 10px;
+    margin: 0;
+}
+
+#search-results>div {
+    padding: 5px 31px 10px;
+    min-height: 85px;
+}
+
+#search-results>div>a {
+    text-decoration: underline;
+}
+
+/*.per-chapter {
+    display: none;
+}
+
+.per-chapter.active {
+    display: block;
+}*/
+
+.description-block {
+    display: none;
+}
+
+.description-block.active {
+    display: block;
+}
+
+#search-results ul.result-path {
+    display: inline-flex;
+    list-style: none;
+    font-size: 9px;
+    margin: 0 0 15px 0;
+    width: 100%;
+}
+
+#search-results ul.result-path li {
+    color: #006699;
+}
+
+#search-results ul.result-path li span {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    margin: 0 4px 0 0;
+}
+
+#search-results ul.result-path li:last-child:after {
+    display: none;
+}
+
+#search-results ul.result-path li:first-child:after {
+    display: inline-block;
+}
+
+#explorer {
+    display: block;
+    min-height: calc(100vh - 118px - 70px);
+    margin-top: 40px;
+    border-top: 2px solid #cdcdcd;
+    width: 83.33333333%;
+    margin-left: 8.33333333%;
+    padding: 0 20px;
+    padding-top: 40px;
+}
+
+@media (max-width:880px) {
+    #explorer {
+
+        margin-top: 30px;
+        width: 100%;
+        margin-left: 0;
+        padding-inline: 12px;
+        padding-top: 40px;
+    }
+}
+#pagin {
+    padding: 5px 0 10px 31px;
+}
+
+#pagin li {
+    margin: 5px 1px 5px 1px;
+}
+
+#pagin li.disabled {
+    cursor: not-allowed;
+}
+
+#pagin li.disabled span {
+    cursor: not-allowed;
+}
+
+.inner-content img {
+    max-width: 100%;
+}
+
+/*
+    - Applied "word-break" to headline text which fixes the issue where long texts overflow and cause horizontal scrolling.
+*/
+
+.title_1 {
+    font-size: 30.4px;
+    font-family: 'StagSans-Medium', sans-serif;
+    letter-spacing: 1px;
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 8px;
+    color: #f7a600;
+}
+
+.title_2 {
+    font-size: 30.4px;
+    font-family: 'ShellFuturaBold', sans-serif;
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+    color: #f7a600;
+}
+
+.subtitle_1 {
+    font-size: 30.4px;
+    font-family: 'StagSans-Light', sans-serif;
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 29.3px;
+    color: #000;
+}
+
+.chapter_1, .chapter_1_continue, .chapter_1_VarA, .chapter_1_VarA_continue {
+    font-family: 'StagSans-Medium', sans-serif;
+    font-size: 30.4px;
+    letter-spacing: 1px;
+    color: #f7a600;
+    margin: 0;
+    padding: 0;
+    padding-top: 24px;
+    padding-bottom: 8px;
+    display: flex;
+}
+
+.chapter_1_1, .chapter_1_1_continue {
+    font-family: 'ShellFuturaBold', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 8px;
+    padding-top: 16px;
+    display: flex;
+}
+
+/* For lists, to prevent the text from wrapping below the numbers. */
+/* .inner-content {
+    word-break: break-word;
+} */
+
+.chapter_1 span.parent-tag, .chapter_1_continue span.parent-tag, .chapter_1_VarA span.parent-tag, .chapter_1_VarA_continue span.parent-tag, .chapter_1_1 span.parent-tag, .chapter_1_1_continue span.parent-tag {
+    margin: 0 10px 0 0;
+}
+
+.chapter_1_1_1, .chapter_1_1_1_continue, .chapter_1_1_1_VarA, .chapter_1_1_1_VarA_continue, .chapter_1_1_1_VarB, .chapter_1_1_1_VarB_continue, .chapter_1_1_1_1, .chapter_1_1_1_1_continue, .chapter_1_1_1_1_VarA, .chapter_1_1_1_1_VarA_continue, .chapter_1_1_1_1_VarB, .chapter_1_1_1_1_VarB_continue {
+    font-family: 'ShellFuturaBold', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    display: flex;
+}
+
+.chapter_1_1_1 span.parent-tag,
+.chapter_1_1_1_continue span.parent-tag
+{
+    margin: 0 10px 0 0;
+}
+
+.body_1,
+.body_1_VarA,
+.body_7 {
+    font-family: 'ShellFuturaBook', sans-serif;
+    font-size: 12px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 8px;
+}
+
+.body_1_VarA {
+    font-size: 10.7px;
+    padding-bottom: 4px;
+}
+
+.body_2 {
+    font-family: 'ShellFuturaBook', sans-serif;
+    font-size: 10px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.body_2_VarA {
+    max-width: 70px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 21.3px;
+}
+
+.body_3 {
+    font-family: 'ShellFuturaBold', sans-serif;
+    font-size: 10px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.body_3_VarA {
+    font-family: 'ShellFuturaBold', sans-serif;
+    font-size: 12px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.body_4_VarA {
+    font-family: 'ShellFuturaBook', sans-serif;
+    font-size: 12px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1.5px;
+}
+
+.body_5 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 12px;
+}
+
+.body_7 {
+    font-size: 12px;
+    padding: 0;
+    padding-bottom: 0px;
+}
+
+.body_8 img, .body_11 img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.body_11{
+    margin-bottom: 16px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.body_10 {
+    /* font-size: 20px; */
+    /* color: #0097a9; */
+    text-align: center;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+.warning_1 .inner-content:before,
+.warning_2_VarA .inner-content:before
+{
+    content: '6';
+    font-family: 'Manualise_Safety_Symbols';
+    margin: 0 0 0 0;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+
+.warning_1 .inner-content,
+.warning_2_VarA .inner-content
+{
+    text-transform: uppercase;
+    font-family: 'ShellFuturaBold', sans-serif;
+    font-size: 12px;
+    color: #000;
+    padding: 3px 5px;
+    margin: 0;
+}
+/* Added code by Royal Weblab */
+.warning_1 .inner-content{
+    background: rgb(228,112,12);
+}
+.warning_2_VarA .inner-content{
+    background: rgb(244,207,0);
+}
+/* Added code by Royal Weblab */
+.ul_1::before,
+.ul_3::before,
+.ul_1_VarA::before,
+.ul_5::before {
+    content: '';
+    font-family: 'Wingding', sans-serif;
+}
+
+.ul_1::before, .ul_3::before, .ul_1_VarA::before, .ul_2::before, .ul_5::before{
+    margin-right: 16px;
+}
+
+.ul_2::before {
+    content: '– ';
+    margin-right: 22px;
+}
+
+.ul_2::before, .ul_3::before {
+    margin-left: 28px;
+}
+
+.ul_1, .ul_2, .ul_3 {
+    font-size: 12px;
+}
+
+.ul_5 {
+    font-size: 10px;
+}
+
+.ul_1,
+.ul_2,
+.ul_5,
+.ol_1,
+.ol_1_indent,
+.ol_1_VarA,
+.ol_2,
+.ol_3,
+.ol_4,
+.ol_5,
+.ol_6,
+.ol_7,
+.ol_1_continue,
+.ol_1_VarA_continue,
+.ol_2_continue,
+.ol_3_continue,
+.ol_4_continue,
+.ol_5_continue,
+.ol_6_continue,
+.ol_7_continue,
+.warning_1,
+.warning_1_VarA,
+.warning_2_VarA,
+.warning_3_VarA,
+.warning_4_VarA,
+.warning_2,
+.warning_3,
+.warning_4 {
+    display: flex;
+    margin: 0 0 1px;
+}
+
+
+filled-circle, .caption.ol_8_continue, .caption.ol_11_continue {
+    font-family: 'MNLCallOutsfamilyBold';
+    line-height: 1;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+.caption.ol_8_continue, .caption.ol_11_continue {
+    font-size: 20px;
+    color: #f7a600;
+}
+
+.warning_1,
+.warning_1_VarA,
+.warning_2_VarA,
+.warning_3_VarA,
+.warning_2,
+.warning_3 {
+    margin: 0;
+    padding: 0 0 7px 0;
+}
+
+.ol_1, .ol_1_continue, .ol_1_indent, .ol_1_VarA, .ol_1_VarA_continue, .ol_1_VarA_indent {
+    font-size: 12px;
+    align-items: center;
+}
+
+.ol_1_VarA_continue,.ol_1_VarA{
+    margin-bottom: 5px;
+}
+.ol_1_VarA_continue .ol_8_continue,.ol_1_VarA .ol_8_continue{
+    margin-right: 5px!important;
+} 
+.ol_1, .ol_1_continue {
+    padding-bottom: 4px;
+}
+
+.ol_2, .ol_2_continue {
+    font-size: 10px;
+}
+
+.ol_1_VarA_indent {
+    padding: 0;
+}
+
+.ol_1 .parent-tag, .ol_2 .parent-tag, .ol_1_VarA .parent-tag, .ol_3 .parent-tag, .ol_4 .parent-tag, .ol_5 .parent-tag, .ol_6 .parent-tag, .ol_7 .parent-tag, .ol_1_continue .parent-tag, .ol_1_VarA_continue .parent-tag, .ol_2_continue .parent-tag, .ol_3_continue .parent-tag, .ol_4_continue .parent-tag, .ol_5_continue .parent-tag, .ol_6_continue .parent-tag, .ol_7_continue .parent-tag {
+    min-width: 22px;
+    margin: 0;
+}
+
+.ol_1_indent .parent-tag, .ol_1_VarA_indent .parent-tag {
+    margin: 0 0 0 22px;
+}
+
+sub {
+    vertical-align: sub;
+    font-size: 75%;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 75%;
+}
+
+/* Table */
+
+.table-container {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.table-block {
+    border: 1px solid #a6a6a6;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    border-left-color: #595959;
+    border-right-color: #595959;
+}
+
+.table_style_1,
+.table_style_2,
+.table_style_3,
+.table_style_4,
+.table_style_5,
+.table_style_6 {
+    width: 100%;
+}
+
+.table_style_1 .td-block {
+    text-align: left;
+    vertical-align: top;
+}
+
+.table_style_1 .td-block .ltb-container,
+.table_style_4 .td-block .ltb-container {
+    /*display: block !important;*/
+}
+
+.table_style_1 .ol_1, .table_style_1 .ol_1_continue {
+    font-size: 10px;
+}
+
+.table_style_4 .td-block {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-block tbody {
+    width: 100%;
+}
+
+.table-block.table-without-border {
+    border: none;
+}
+
+.table-block .tr-block {
+    display: table-row;
+    border-bottom: 1px solid #a6a6a6;
+    width: 100%;
+}
+
+.table-block .tr-block:nth-child(2n+1) {
+    background: #f7f7f7;
+}
+
+.table-block .tr-block:nth-child(2n) {
+    background: #fff;
+}
+
+.table-block .tr-block .td-block {
+    border-left: 1px solid #595959;
+    padding: 7px;
+    display: table-cell;
+}
+
+.table-block .tr-block .td-block:first-child, .table-block .tr-block:last-child, .table-block .tr-block.without-padding .td-block ul li:last-child {
+    border-bottom: none;
+    border-top: none;
+}
+
+.table-block .tr-block.without-padding .td-block {
+    padding: 0;
+}
+
+.table-block .tr-block .td-block.td-center {
+    text-align: center;
+}
+
+.table-block .tr-block.without-padding .td-block ul li {
+    padding: 10px;
+    border-bottom: 1px dotted #a3a5a4;
+}
+
+.table-block .tr-block .td-block.img-holder {
+    text-align: center;
+}
+
+.table-block .td-block img {
+    max-width: 100%;
+    display: block;
+}
+
+.table-block .td-block.image-holder {
+    padding: 20px 0;
+}
+
+.table-block .td-block .icon-number {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    font-size: 19px;
+}
+
+.table-block .tr-block .td-block li {
+    margin: 0 0 5px;
+}
+
+.table_style_2,
+.table_style_3 {
+    border: none;
+}
+
+.table_style_2 .tr-block .td-block:nth-child(1){
+    width: 11%;
+}
+.table_style_2 .tr-block .td-block:nth-child(2){
+    width: 89%;
+}
+.table_style_1 .tr-block .td-block:nth-child(1){
+        width: 15%;
+    }
+    .table_style_1 .tr-block .td-block:nth-child(2){
+        width: 85%;
+    }
+
+@media (max-width: 766px){
+    .table_style_2 .tr-block .td-block:nth-child(1){
+        width: 20%;
+    }
+    .table_style_2 .tr-block .td-block:nth-child(2){
+        width: 80%;
+    }
+    .table_style_1 .tr-block .td-block:nth-child(1){
+        width: 20%;
+    }
+    .table_style_1 .tr-block .td-block:nth-child(2){
+        width: 80%;
+    }
+}
+
+.table_style_2 .tr-block{
+    align-items: center;
+    display: flex;
+    border-top: 1px solid #ccc!important;
+    border-bottom: 1px solid #ccc!important;
+}
+
+.table_style_2 .tr-block,
+.table_style_3 .tr-block {
+    background: none !important;
+    border: none;
+}
+
+.table_style_2 .tr-block .td-block,
+.table_style_3 .tr-block .td-block {
+    background: none;
+    border: none;
+}
+
+.table_style_1 .tr-block .td-block {
+    padding: 3.5px;
+}
+
+mark {
+    color: #000;
+}
+
+.per-language,
+.per-language-homepage {
+    display: none !important;
+}
+
+.per-language-homepage.active {
+    display: block !important;
+}
+
+.per-language.ng-show {
+    display: block !important;
+    /* max-width: 720px; */
+}
+
+.crossRef.ol_8_continue, .crossRef.ol_11_continue {
+    font-family: 'ShellFuturaBold', sans-serif;
+    font-size: inherit;
+    color: inherit;
+}
+
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
+}
+
+red {
+    color: #595959;
+    vertical-align: 1px;
+}
+
+green {
+    display: none;
+}
+
+blue {
+    color: #fff;
+    background: rgb(0,89,163);
+    display: inline-block;
+    padding: 5px;
+    font-family: 'ShellFuturaBold', sans-serif;
+    margin: 0 0 7px;
+    font-size: 10.7px;
+    text-transform: uppercase;
+}
+
+
+/*Image enlarge function*/
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+}
+
+#lightbox:hover #close-button {
+    display: block;
+    color: #ccc;
+}
+
+#close-button {
+    display: none;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    right: 0;
+    font-size: 18px;
+    background: rgba(30, 30, 30, 0.6);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 48px;
+    margin: 0;
+    padding: 9px;
+    transition: color 0.2s;
+    visibility: inherit;
+    width: 48px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#close-button:hover {
+    color: #fff;
+}
+
+#lightbox-content {
+    top: 15px;
+    width: calc(100% - 60px);
+    max-height: calc(100vh - 90px);
+    position: relative;
+    height: 100%;
+    margin: 30px;
+}
+
+#lightbox-content img {
+    background: #fff;
+    width: auto !important;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+}
+
+.clickable-image {
+    cursor: pointer;
+}
+
+.hyperlink {
+    text-decoration: none;
+    font-family: 'ShellFuturaBook', sans-serif;
+    font-size: inherit;
+    color: #0097a9;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+}
+
+/*.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}*/
+
+
+/* ============= Responsive ========= */
+
+@media (max-width: 992px) {
+    .home-title-block {
+        padding: 0;
+    }
+}
+
+@media (max-width: 880px) {
+    .wrapper-narrow,
+    .wrapper {
+        padding: 0 20px;
+    }
+    /* ========== Header ========= */
+    .header {
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    .header .wrapper {
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .fixed-header .logo-holder {
+        display: none;
+    }
+
+    /*
+        - The logo height width is set to a fixed "188px" so that the header height doesn't change otherwise it will effect the search field's vertical position.
+    */
+
+    .logo-holder {
+        width: 100%;
+        flex: 2;
+        text-align: center;
+        margin: 0;
+        order: 2;
+        padding-left: 13px;
+    }
+    .header .logo {
+        width: 188px;
+    }
+    .search-language-holder {
+        order: 3;
+        padding: 0;
+    }
+    .language-holder {
+        text-align: right;
+        margin: 0;
+    }
+    .header-link {
+        margin: 3px auto 0 0;
+    }
+    .mobile-menu-button {
+        order: 1;
+        display: block;
+        margin: 0;
+        cursor: pointer;
+    }
+    .mobile-menu-button:before,
+    .mobile-menu-button:after {
+        content: '';
+    }
+    .mobile-menu-button:before,
+    .mobile-menu-button:after,
+    .mobile-menu-button span {
+        display: block;
+        height: 4px;
+        background: #595959;
+        border-radius: 5px;
+        width: 25px;
+    }
+    .mobile-menu-button span {
+        margin: 4px 0;
+    }
+    .home-title-block {
+        flex-direction: column;
+    }
+    .home-title-block h1 {
+        margin: 0 0 15px;
+        font-size: 45px;
+        text-align: center;
+    }
+    .title_1 {
+
+    }
+    .home-title-block a {
+        padding: 11px 14px 11px 19px;
+    }
+    .home-title-block a:after {
+        margin: 0 0 0 12px;
+    }
+
+    /* ========= Sidebar ========= */
+    /*
+        - When switching from desktop to mobile/tablet mode, for a second you see the sidebar menu text before it slides out of view. The following fixes that.
+    */
+    .sidebar {
+        transition: none;
+        -webkit-transform: translateX(-105%);
+        transform: translateX(-105%);
+        position: fixed;
+        background: #f8f8f8;
+        border-right: 1px solid #f8f8f8;
+        width: 280px;
+        top: 0;
+        left: 0;
+        padding: 60px 20px 30px;
+        max-height: 100%;
+        height: 100%;
+        overflow: auto;
+        z-index: 3;
+    }
+    .sidebar.anime {
+        transition: 0.3s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    .sidebar.active {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    .sidebar .close-button {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 26px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .sidebar .close-button:before,
+    .sidebar .close-button:after {
+        content: '';
+        width: 2px;
+        height: 26px;
+        background: #808080;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .sidebar .close-button:before {
+        transform: rotate(-45deg);
+        transform-origin: 100% 0;
+    }
+    .sidebar .close-button:after {
+        transform: rotate(45deg);
+        transform-origin: 100% 0;
+        right: 0px;
+        left: auto;
+        top: 1px;
+    }
+    .sidebar-content {
+        position: static !important;
+    }
+    .sidebar-content.fixed {
+        max-width: none !important;
+    }
+    .submenu-2 {
+        padding: 6px 0 0 0;
+    }
+    .submenu-2 a {
+        padding: 8px 0;
+    }
+    .main-content {
+        width: 100%;
+    }
+    /*
+        - Remvoes the "720px" max-width limit.
+    */
+    .per-language.ng-show {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper-narrow,
+    .wrapper {
+        padding: 0;
+    }
+
+    .wrapper-content {
+        padding: 0 0 47px 0;
+    }
+
+    /*
+        - Reduced side padding to give more space for contents.
+    */
+
+    /* section.per-language {
+        padding: 25px;
+    } */
+
+    /*
+        - In mobile, the "Installatiehandleiding" causes horizontal scrolling and also hides the right side image.
+    */
+
+    .title_1,
+    .subtitle_1,
+    .chapter_1, .chapter_1_continue, .chapter_1_VarA, .chapter_1_VarA_continue {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    /*
+        - The height is set to allow space for the search bar which is absolutely positioned below the logo.
+    */
+    .header {
+        height: 165px;
+    }
+    /* #explorer {
+        margin-top: 200px;
+    } */
+    .language-holder-block {
+        position: relative;
+        align-self: center;
+        margin: 0 0 0 15px;
+    }
+    .language-holder-block .active-language {
+        display: block;
+        color: #dd1d21;
+        cursor: pointer;
+    }
+    .language-holder-block .active-language:after {
+        content: '';
+        width: 19px;
+        height: 14px;
+        display: inline-block;
+        margin: 0 0 0 4px;
+        vertical-align: middle;
+        background: url('../images/white-arrow-down.svg') no-repeat center;
+        background-size: contain;
+    }
+    .language-holder-block .language-holder {
+        width: 120px;
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+        position: absolute;
+        z-index: 3;
+        top: 100%;
+        right: 0;
+        background: #f8f8f8;
+        border: 1px solid #eee;
+    }
+    .language-holder-block.active .language-holder {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .language-holder li {
+        width: 100%;
+        padding: 4px 7px;
+    }
+    .language-holder li a {
+        color: #444;
+    }
+    /* .search-language-holder {
+        max-width: 75%;
+    } */
+
+    /*
+        - The search bar is absolutely positioned below the logo.
+    */
+    /* .search-language-holder .search-holder {
+        width: calc(100% - 40px);
+        left: 20px;
+        bottom: 10px;
+        position: absolute;
+    } */
+
+    /*
+        - Makes the table list width 100%.
+        - Removes vertical spacing between the 2 lists.
+    */
+
+    .table_style_3 .tr-block .td-block {
+        width: 100%!important;
+        display: block;
+    }
+
+    .table_style_3 .tr-block > .td-block:first-child {
+        padding-bottom: 0;
+    }
+
+    .table_style_3 .tr-block > .td-block:not(:first-child) {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-block {
+        word-break: break-all;
+        font-size: 20px;
+    }
+    .title-block span {
+        margin: 0 15px 0 0;
+    }
+    .list-columns {
+        flex-direction: column;
+    }
+    .list-columns ul {
+        width: 100%;
+        padding: 0;
+    }
+    .row-holder {
+        flex-direction: column;
+    }
+    .w50 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper-content {
+        padding: 0 0 47px 0;
+    }
+    .header-link {
+        display: none;
+    }
+    /* .search-language-holder {
+        margin: 0 0 0 auto;
+    } */
+    .title-block {
+        font-size: 18px;
+    }
+    .title-block span {
+        margin: 0 10px 0 0;
+    }
+}
+
+@media (max-width: 319px) {
+    .header {
+        overflow-x: auto; /* Enables horizontal scrolling in resolutions below 320px. */
+    }
+
+    .header .language-dropdown {
+        position: fixed;
+        top: 71px;
+    }
+}
+
+@media (max-width: 280px) {
+    .sidebar {
+        width: 100vw;
+        overflow-x: auto;
+    }
+
+    .sidebar .close-button,
+    .sidebar .sidebar-content {
+        min-width: 280px;
+    }
+
+    .sidebar .close-button {
+        left: 0;
+        right: 0;
+    }
+
+    .sidebar .close-button:before {
+        left: auto;
+        right: 18px;
+    }
+}
+
+@media (min-width: 881px) {
+
+/******************************************************************************************************************************************************************/
+/*                                                                 [ Header ]                                                                                     */
+/******************************************************************************************************************************************************************/
+
+/**************/
+/*** Search ***/
+/**************/
+
+/*
+    - In mobile, clicking the search icon toggles the search input field, after hiding the search input field in mobile, switching to desktop view would keep the input hidden unless the following code is executed.
+*/
+
+.search-holder input {
+    display: block!important;
+}
+
+/******************/
+/*** End Search ***/
+/******************/
+
+/********************/
+/*** Overlay Page ***/
+/********************/
+
+/*
+    - When the menu is open in mobile, switching to desktop showed the transparent black overlay, the following code hides it.
+*/
+
+.overlay-page.active {
+    opacity: 0;
+}
+
+/******************************************************************************************************************************************************************/
+/*                                                                 [ End Header ]                                                                                 */
+/******************************************************************************************************************************************************************/
+
+
+.sidebar-content.navbar {
+    max-height: calc(100vh - 125px);
+    overflow-y: auto;
+    /* margin-top: 60px; */
+}
+
+
+} /* End min-width: 881px */
+
+
+/*
+  Add a scroll-margin-top to all elements that you want to be able to link to.
+  (you may need to select items that don't have an id as well)
+*/
+
+* {
+  scroll-margin-top: 130px;
+}
+ 
+@media (max-width: 650px){
+    div[id^='VENCXzI3Mjc4OQ'],div[id^='VENCXzI3Mjc2OA'],div[id^='VENCXzI3Mjc2OQ']{
+        width: max-content;
+    }
+}
