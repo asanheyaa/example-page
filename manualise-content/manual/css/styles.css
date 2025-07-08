@@ -2162,7 +2162,7 @@ blue {
         -webkit-transform: translateX(-105%);
         transform: translateX(-105%);
         position: fixed;
-        background: #f8f8f8;
+        background: #FFF;
         border-right: 1px solid #f8f8f8;
         width: 280px;
         top: 0;
