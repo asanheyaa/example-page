@@ -159,26 +159,8 @@
 		})
 
 
-		function onLoad() {
-			let iframe = document.querySelector("iframe")
-			
-			try {
-				const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-				// Наприклад, копіюємо елемент з id="content"
-				const elementToCopy = iframeDoc.getElementById('TOC-sidebar');
-
-				if (elementToCopy) {
-					const clone = elementToCopy.cloneNode(true); // глибоке клонування
-					document.body.appendChild(clone); // або куди треба
-					console.log('✅ Елемент скопійовано');
-				} else {
-					console.warn('⚠️ Елемент не знайдено в iframe');
-				}
-			} catch (err) {
-				console.error('❌ Неможливо отримати доступ до iframe. Можливо, CORS:', err);
-			}
-
+		function onLoad(e) {
+		
 			let iframeUrl = document.querySelector("iframe").contentWindow.document
 			let sidebar = iframeUrl.querySelector('#TOC-sidebar')
 			
@@ -186,9 +168,9 @@
 
 			if (sidebar) {
 				document.body.classList.add('toc-menu')
-				// let clone = sidebar.cloneNode(true)
-				// const parentNode = document.querySelector('.wrapper');
-				// parentNode.insertBefore(clone, parentNode.firstChild);
+				let clone = sidebar.cloneNode(true)
+				const parentNode = document.querySelector('.wrapper');
+				parentNode.insertBefore(clone, parentNode.firstChild);
 
 
 			} else {
