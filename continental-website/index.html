@@ -158,39 +158,38 @@
 
 		})
 
-		const waitForElement = (doc, selector, timeout = 20000) => {
-			return new Promise((resolve, reject) => {
-				const interval = 100;
-				let waited = 0;
+		// const waitForElement = (doc, selector, timeout = 20000) => {
+		// 	return new Promise((resolve, reject) => {
+		// 		const interval = 100;
+		// 		let waited = 0;
 
-				const check = () => {
-					const el = doc.querySelector(selector);
-					if (el) return resolve(el);
+		// 		const check = () => {
+		// 			const el = doc.querySelector(selector);
+		// 			const links = doc.querySelectorAll('.nav-link');
+		// 			if (links.length === 74) return resolve(el);
 
-					waited += interval;
-					if (waited >= timeout) return reject(new Error('Елемент не зʼявився в iframe'));
+		// 			waited += interval;
+		// 			if (waited >= timeout) return reject(new Error('Елемент не зʼявився в iframe'));
 
-					setTimeout(check, interval);
-				};
-				check();
-			});
-		};
+		// 			setTimeout(check, interval);
+		// 		};
+		// 		check();
+		// 	});
+		// };
 
 		const iframe = document.querySelector('.iframe');
 
-		iframe.addEventListener('load', async () => {
-			try {
-				const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-				const elementToCopy = await waitForElement(iframeDoc, '#TOC-sidebar');
+		iframe.addEventListener('load', loadFunction);
 
+		function loadFunction() {
+			const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
-				
-				
-
-
+			// ng - show
+			const elementToCopy = iframeDoc.querySelector('#TOC-sidebar');
+			if (elementToCopy) {
 
 				const clone = elementToCopy.cloneNode(true);
-				document.body.appendChild(clone);
+				document.body.append(clone);
 
 				if (clone) {
 					document.body.classList.add('toc-menu')
@@ -207,13 +206,20 @@
 					document.body.classList.remove('toc-menu')
 				}
 
-				console.log('✅ Елемент скопійовано з затримкою');
-			} catch (err) {
-				console.error(err.message);
-			}
+				const iframeWindow = iframe.contentWindow;
+				const iframeURL = iframeWindow.location.href;
+				const slice = iframeURL.split('=')
 
-			
-		});
+				if (slice.includes('en_GB')){
+					const engList = document.querySelector('#topic-options-en_GB');
+					engList.classList.add('ng-show')
+				} else{
+					const ptList = document.querySelector('#topic-options-pt_PT');
+					ptList.classList.add('ng-show')
+				}
+
+			}
+		}
 
 
 		// function onLoad(e) {
