@@ -18,7 +18,7 @@
 
 <body>
 	<div class="wrapper">
-<div class="overlay-page"></div>
+		<div class="overlay-page"></div>
 		<header class="header-page">
 			<div class="header__container">
 				<button class="mobile-menu-toc">
@@ -75,7 +75,7 @@
 			<div class="page__container" data-eframe-wrapper>
 				<!-- Embedded my-instructions.com iFrame -->
 				<!-- https://my-instructions.com/continental/test-embed-link/manualise-content/pages/languages.html -->
-				<iframe class="iframe" onLoad="onLoad();" src="../manualise-content/pages/languages.html">
+				<iframe class="iframe" src="../manualise-content/pages/languages.html">
 				</iframe>
 			</div>
 		</main>
@@ -153,36 +153,93 @@
 				sidebar.classList.add('anime')
 				overlay.classList.add('active')
 				overlay.classList.add('anime')
-				
+
 			}
 
 		})
 
+		const waitForElement = (doc, selector, timeout = 5000) => {
+			return new Promise((resolve, reject) => {
+				const interval = 100;
+				let waited = 0;
 
-		function onLoad(e) {
-		
-			let iframeUrl = document.querySelector("iframe").contentWindow.document
-			let sidebar = iframeUrl.querySelector('#TOC-sidebar')
+				const check = () => {
+					const el = doc.querySelector(selector);
+					if (el) return resolve(el);
+
+					waited += interval;
+					if (waited >= timeout) return reject(new Error('Елемент не зʼявився в iframe'));
+
+					setTimeout(check, interval);
+				};
+				check();
+			});
+		};
+
+		const iframe = document.querySelector('.iframe');
+
+		iframe.addEventListener('load', async () => {
+			try {
+				const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+				const elementToCopy = await waitForElement(iframeDoc, '#TOC-sidebar');
+
+
+				
+				
+
+
+
+				const clone = elementToCopy.cloneNode(true);
+				document.body.appendChild(clone);
+
+				if (clone) {
+					document.body.classList.add('toc-menu')
+					// let clone = sidebar.cloneNode(true)
+					// const parentNode = document.querySelector('.wrapper');
+					// parentNode.insertBefore(clone, parentNode.firstChild);
+					let closeButton = clone.querySelector('.close-button');
+
+					if (closeButton) {
+						closeMenu(closeButton)
+					}
+
+				} else {
+					document.body.classList.remove('toc-menu')
+				}
+
+				console.log('✅ Елемент скопійовано з затримкою');
+			} catch (err) {
+				console.error(err.message);
+			}
+
 			
+		});
 
 
-			if (sidebar) {
-				document.body.classList.add('toc-menu')
-				let clone = sidebar.cloneNode(true)
-				const parentNode = document.querySelector('.wrapper');
-				parentNode.insertBefore(clone, parentNode.firstChild);
+		// function onLoad(e) {
+
+		// 	let iframeUrl = document.querySelector("iframe").contentWindow.document
+		// 	let sidebar = iframeUrl.querySelector('#TOC-sidebar')
 
 
-			} else {
-				document.body.classList.remove('toc-menu')
-			}
 
-			let closeButton = document.querySelector('.close-button');
+		// 	if (sidebar) {
+		// 		document.body.classList.add('toc-menu')
+		// 		let clone = sidebar.cloneNode(true)
+		// 		const parentNode = document.querySelector('.wrapper');
+		// 		parentNode.insertBefore(clone, parentNode.firstChild);
 
-			if (closeButton) {
-				closeMenu(closeButton)
-			}
-		}
+
+		// 	} else {
+		// 		document.body.classList.remove('toc-menu')
+		// 	}
+
+		// 	let closeButton = document.querySelector('.close-button');
+
+		// 	if (closeButton) {
+		// 		closeMenu(closeButton)
+		// 	}
+		// }
 
 		function closeMenu(closeButton) {
 			let sidebar = document.querySelector('#TOC-sidebar')
