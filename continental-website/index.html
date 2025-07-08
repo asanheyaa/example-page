@@ -209,11 +209,18 @@
 				const iframeWindow = iframe.contentWindow;
 				const iframeURL = iframeWindow.location.href;
 				const slice = iframeURL.split('=')
-
-				if (slice.includes('en_GB')){
+				console.log(iframeURL);
+				if (slice.includes('en-GB')) {
+					console.log('gb');
 					const engList = document.querySelector('#topic-options-en_GB');
 					engList.classList.add('ng-show')
-				} else{
+				} else if (slice.includes('en_GB')) {
+					console.log('gb');
+					const engList = document.querySelector('#topic-options-en_GB');
+					engList.classList.add('ng-show')
+
+				} else {
+					console.log('pt');
 					const ptList = document.querySelector('#topic-options-pt_PT');
 					ptList.classList.add('ng-show')
 				}
